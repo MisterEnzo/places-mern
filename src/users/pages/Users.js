@@ -4,12 +4,12 @@ import UsersList from '../components/UsersList';
 
 const Users = () => {
   let users = [
-    {
-      id:1,
-      name: 'enzo',
-      image: 'balbablal',
-      placeCount: 2
-    }
+    // {
+    //   id:1,
+    //   name: 'enzo',
+    //   image: 'balbablal',
+    //   placeCount: 2
+    // }
   ]
   return (
     <div>
