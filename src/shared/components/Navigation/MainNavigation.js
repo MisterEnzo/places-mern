@@ -2,12 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import MainHeader from './MainHeader';
+import SideDrawer from './SideDrawer';
 import NavLinks from './NavLinks';
 import './MainNavigation.css';
 
 const MainNavigation = props => {
   return (
-    <MainHeader>
+    <React.Fragment>
+      <SideDrawer>
+        <nav className="main-navigation__">
+          <NavLinks />
+        </nav>
+      </SideDrawer>
+      <MainHeader>
       <button className="main-navigation__menu-btn">
         <span />
         <span />
@@ -16,10 +23,11 @@ const MainNavigation = props => {
       <h1 className="main-navigation__title">
         <Link to='/'>Places</Link>
       </h1>
-      <nav>
+      <nav className="main-navigation__header-nav">
         <NavLinks />
       </nav>
-    </MainHeader>
+      </MainHeader>
+    </React.Fragment>
   )
 }
 
